@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yassine Photography | استوديو ياسين للتصوير الاحترافي - العرائش</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Cairo & Tajawal) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                        },
+                        darkBg: '#0f172a',
+                        cardBg: '#1e293b'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        .glassmorphism {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #fef08a 0%, #eab308 50%, #ca8a04 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-amber-500 selection:text-black">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 right-0 left-0 z-50 glassmorphism border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-300 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid font-bold fa-camera-retro"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-wide text-white block leading-none">YASSINE</span>
+                    <span class="text-xs text-amber-400 font-semibold tracking-widest">PHOTOGRAPHY - LARACHE</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+                <a href="#about" class="hover:text-amber-400 transition-colors">من نحن</a>
+                <a href="#services" class="hover:text-amber-400 transition-colors">خدماتنا</a>
+                <a href="#portfolio" class="hover:text-amber-400 transition-colors">معرض الأعمال</a>
+                <a href="#calculator" class="hover:text-amber-400 transition-colors">حاسبة الأسعار</a>
+                <a href="#reviews" class="hover:text-amber-400 transition-colors">آراء العملاء</a>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://wa.me/212660949017" target="_blank" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-yellow-400 text-slate-950 font-bold text-sm shadow-md hover:shadow-amber-500/25 hover:scale-105 transition-all flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>احجز موعدك</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 flex flex-col gap-4 text-center">
+            <a href="#about" class="py-2 text-slate-300 hover:text-amber-400 font-medium">من نحن</a>
+            <a href="#services" class="py-2 text-slate-300 hover:text-amber-400 font-medium">خدماتنا</a>
+            <a href="#portfolio" class="py-2 text-slate-300 hover:text-amber-400 font-medium">معرض الأعمال</a>
+            <a href="#calculator" class="py-2 text-slate-300 hover:text-amber-400 font-medium">حاسبة الأسعار</a>
+            <a href="#reviews" class="py-2 text-slate-300 hover:text-amber-400 font-medium">آراء العملاء</a>
+            <a href="https://wa.me/212660949017" target="_blank" class="w-full py-3 rounded-xl bg-amber-500 text-slate-950 font-bold text-center flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>تواصل عبر الواتساب</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden">
+        <!-- Background Overlay & Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1920&auto=format&fit=crop" class="w-full h-full object-cover opacity-25 filter brightness-75 scale-105" alt="Photography Background">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/90 to-slate-950"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold mb-6 animate-pulse">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>استوديو ياسين للتصوير الاحترافي - مدينة العرائش والجهات المجاورة</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
+                نخلّد لحظاتكم السعيدة <br class="hidden sm:inline">
+                <span class="text-gradient">بأعلى جودة واحترافية سينمائية</span>
+            </h1>
+            
+            <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
+                مع المصور <strong class="text-white">ياسين</strong>، نحول أجمل لحظات أعراسكم وحفلاتكم ومناسباتكم الخاصة في العرائش وخارجها إلى ذكريات سينمائية لا تُنسى بأحدث الكاميرات ومعدات الدرون.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/212660949017" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 font-extrabold text-base shadow-xl shadow-amber-500/20 hover:scale-105 transition-all flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>احجز تاريخ المناسبة الآن</span>
+                </a>
+                <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold text-base transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>احسب سعر باقتك</span>
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-10 border-t border-slate-800/80">
+                <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800">
+                    <h3 class="text-3xl font-black text-amber-400 mb-1">+500</h3>
+                    <p class="text-xs text-slate-400">حفل ومناسبة مصورة</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800">
+                    <h3 class="text-3xl font-black text-amber-400 mb-1">100%</h3>
+                    <p class="text-xs text-slate-400">رضا الزبناء والعملاء</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800">
+                    <h3 class="text-3xl font-black text-amber-400 mb-1">4K UHD</h3>
+                    <p class="text-xs text-slate-400">جودة تصوير وفيديو سينمائية</p>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800">
+                    <h3 class="text-3xl font-black text-amber-400 mb-1">+8</h3>
+                    <p class="text-xs text-slate-400">سنوات من الخبرة والإبداع</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-900/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Image Side -->
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?q=80&w=800&auto=format&fit=crop" alt="Yassine Photographer" class="w-full h-[450px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+                    </div>
+                    <!-- Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-slate-900 border border-amber-500/40 p-5 rounded-2xl shadow-xl flex items-center gap-4 hidden sm:flex">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">مصور محترف بالعرائش</h4>
+                            <p class="text-slate-400 text-xs">متخصص في تغطية الأعراس والحفلات</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Side -->
+                <div>
+                    <span class="text-amber-400 font-bold text-sm tracking-wider uppercase mb-2 block">عن المصور ياسين</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">شغف بالتفاصيل ورؤية إبداعية توثق أجمل لحظاتكم</h2>
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        مرحباً بكم! أنا **ياسين**، مصور فوتوغرافي ومخرج فيديوهات مناسبات بمدينة **العرائش**. أؤمن أن كل حفل يحمل قصة فريدة تستحق أن تُحكى بأعلى درجات الإتقان والجمالية.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed mb-8">
+                        نعتمد في محلنا على أحدث التقنيات الحديثة: كاميرات Full Frame عالية الدقة، طائرات الدرون (Drone) للتصوير الجوي، أنظمة إضاءة متطورة، ألبومات حرارية فاخرة، مع تعديل احترافي للألوان والمونتاج السينمائي.
+                    </p>
+
+                    <!-- Feature List -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-800">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i>
+                            <span class="text-sm font-semibold text-slate-200">معدات تصوير سينمائية</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-800">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i>
+                            <span class="text-sm font-semibold text-slate-200">التزام تام بالمواعيد</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-800">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i>
+                            <span class="text-sm font-semibold text-slate-200">ألبومات حرارية عالية الجودة</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-800/40 border border-slate-800">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i>
+                            <span class="text-sm font-semibold text-slate-200">طاقم عمل متكامل (رجال/نساء)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-400 font-bold text-sm tracking-wider uppercase mb-2 block">خدماتنا المتخصصة</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">خدمات تصوير شاملة لكل المناسبات</h2>
+                <p class="text-slate-400">نقدم باقة واسعة من الخدمات المصممة خصيصاً لتلبية جميع احتياجاتكم في العرائش والمدن المجاورة</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-900 border border-slate-800 hover:border-amber-500/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-3xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">تصوير الأعراس والخطوبة</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        تغطية كاملة لجميع لحظات ليلة العمر، مع التركيز على التفاصيل الدقيقة، واللقطات العفوية والبورتريه للعروسين.
+                    </p>
+                    <a href="https://wa.me/212660949017?text=السلام%20عليكم%20أريد%20استفسار%20عن%20تصوير%20الأعراس" target="_blank" class="text-amber-400 text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        <span>طلب استفسار</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-slate-900 border border-slate-800 hover:border-amber-500/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-3xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">فيديو سينمائي ومونتاج 4K</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        تصوير فيديو بدقة 4K مع إخراج سينمائي ومونتاج احترافي يشمل الهندسة الصوتية وإضافة التأثيرات الجمالية.
+                    </p>
+                    <a href="https://wa.me/212660949017?text=السلام%20عليكم%20أريد%20استفسار%20عن%20تصوير%20الفيديو%20السينمائي" target="_blank" class="text-amber-400 text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        <span>طلب استفسار</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-slate-900 border border-slate-800 hover:border-amber-500/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-3xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">التصوير الجوي (Drone)</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        إلتقاط مشاهد جوية ساحرة لمكان الحفل والمظاهر الاحتفالية لتبدو المناسبة وكأنها فيلم سينمائي رائع.
+                    </p>
+                    <a href="https://wa.me/212660949017?text=السلام%20عليكم%20أريد%20استفسار%20عن%20التصوير%20الجوي" target="_blank" class="text-amber-400 text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        <span>طلب استفسار</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-slate-900 border border-slate-800 hover:border-amber-500/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-3xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">أعياد الميلاد والمؤتمرات</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        تغطية الحفلات العائلية، أعياد الميلاد، واللقاءات الرسمية والندوات مع توثيق كلي لجميع التفاصيل.
+                    </p>
+                    <a href="https://wa.me/212660949017?text=السلام%20عليكم%20أريد%20استفسار%20عن%20تصوير%20حفلة/مؤتمر" target="_blank" class="text-amber-400 text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        <span>طلب استفسار</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-slate-900 border border-slate-800 hover:border-amber-500/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-3xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">طباعة الألبومات الحرارية</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        تصميم وطباعة ألبومات حرارية فاخرة (Digital Album) بجودة عالية ومقاومة للماء والعوامل الجوية.
+                    </p>
+                    <a href="https://wa.me/212660949017?text=السلام%20عليكم%20أريد%20استفسار%20عن%20طباعة%20الألبومات" target="_blank" class="text-amber-400 text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        <span>طلب استفسار</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-slate-900 border border-slate-800 hover:border-amber-500/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-3xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">جلسات تصوير خارجية (Outdoor)</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        جلسات تصوير خاصة للزوجين أو الأفراد في الطبيعة أو مواقع فاخرة من اختياركم قبل أو بعد المناسبة.
+                    </p>
+                    <a href="https://wa.me/212660949017?text=السلام%20عليكم%20أريد%20استفسار%20عن%20جلسات%20التصوير%20الخارجية" target="_blank" class="text-amber-400 text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                        <span>طلب استفسار</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Section -->
+    <section id="portfolio" class="py-20 bg-slate-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-amber-400 font-bold text-sm tracking-wider uppercase mb-2 block">معرض الأعمال</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">لمحات من تصويرنا الحديث</h2>
+                </div>
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="filter-btns">
+                    <button data-filter="all" class="px-4 py-2 rounded-xl bg-amber-500 text-slate-950 font-bold text-sm filter-btn transition-all">الكل</button>
+                    <button data-filter="weddings" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 font-bold text-sm filter-btn transition-all">أعراس</button>
+                    <button data-filter="parties" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 font-bold text-sm filter-btn transition-all">حفلات ومناسبات</button>
+                    <button data-filter="portraits" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 font-bold text-sm filter-btn transition-all">بورتريه</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                <!-- Item 1 -->
+                <div class="gallery-item weddings relative group overflow-hidden rounded-3xl border border-slate-800 h-80">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Wedding">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                        <span class="text-amber-400 text-xs font-bold uppercase">تصوير أعراس</span>
+                        <h4 class="text-white font-extrabold text-lg">ليلة زفاف أسطورية</h4>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item parties relative group overflow-hidden rounded-3xl border border-slate-800 h-80">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Party">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                        <span class="text-amber-400 text-xs font-bold uppercase">حفلات</span>
+                        <h4 class="text-white font-extrabold text-lg">تغطية حفل فاخر</h4>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item portraits relative group overflow-hidden rounded-3xl border border-slate-800 h-80">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Portrait">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                        <span class="text-amber-400 text-xs font-bold uppercase">بورتريه</span>
+                        <h4 class="text-white font-extrabold text-lg">جلسة تصوير احترافية</h4>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item weddings relative group overflow-hidden rounded-3xl border border-slate-800 h-80">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Wedding">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                        <span class="text-amber-400 text-xs font-bold uppercase">تصوير أعراس</span>
+                        <h4 class="text-white font-extrabold text-lg">تفاصيل العروسين</h4>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item parties relative group overflow-hidden rounded-3xl border border-slate-800 h-80">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Party">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                        <span class="text-amber-400 text-xs font-bold uppercase">حفلات وتجمعات</span>
+                        <h4 class="text-white font-extrabold text-lg">أجواء الحفل الممتعة</h4>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item weddings relative group overflow-hidden rounded-3xl border border-slate-800 h-80">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Wedding">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end">
+                        <span class="text-amber-400 text-xs font-bold uppercase">تصوير ديكور وقاعات</span>
+                        <h4 class="text-white font-extrabold text-lg">إضاءة وديكور المناسبات</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Calculator / Interactive Section -->
+    <section id="calculator" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 p-8 sm:p-12 rounded-3xl shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl"></div>
+
+                <div class="text-center mb-10">
+                    <span class="text-amber-400 font-bold text-sm tracking-wider uppercase mb-2 block">حاسبة تقدير التكلفة</span>
+                    <h2 class="text-3xl font-extrabold text-white">صمّم باقة التصوير الخاصة بك</h2>
+                    <p class="text-slate-400 text-sm mt-2">اختر الخيارات المناسبة لك للحصول على تقدير فوري للتكلفة وإرسالها المباشر للمصور ياسين</p>
+                </div>
+
+                <!-- Interactive Form -->
+                <div class="space-y-6">
+                    <!-- Event Type -->
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-2 text-sm">نوع المناسبة:</label>
+                        <select id="calc-type" class="w-full p-4 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                            <option value="2500">حفل زفاف كامل (Wedding Day)</option>
+                            <option value="1500">حفل خطوبة (Engagement)</option>
+                            <option value="1000">عيد ميلاد / عقيقة / حفل خاص</option>
+                            <option value="1200">جلسة تصوير خارجية فقط (Session)</option>
+                        </select>
+                    </div>
+
+                    <!-- Options Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <label class="flex items-center gap-3 p-4 rounded-xl bg-slate-800/60 border border-slate-700 cursor-pointer hover:border-amber-500/50 transition-all">
+                            <input type="checkbox" id="calc-drone" value="800" class="w-5 h-5 accent-amber-500 rounded">
+                            <span class="text-slate-200 text-sm font-semibold">إضافة تصوير جوي (Drone)</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-4 rounded-xl bg-slate-800/60 border border-slate-700 cursor-pointer hover:border-amber-500/50 transition-all">
+                            <input type="checkbox" id="calc-album" value="500" class="w-5 h-5 accent-amber-500 rounded">
+                            <span class="text-slate-200 text-sm font-semibold">ألبوم حراري فاخر (Digital Album)</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-4 rounded-xl bg-slate-800/60 border border-slate-700 cursor-pointer hover:border-amber-500/50 transition-all">
+                            <input type="checkbox" id="calc-crane" value="700" class="w-5 h-5 accent-amber-500 rounded">
+                            <span class="text-slate-200 text-sm font-semibold">كاميرا إضافية + طاقم فيديو</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-4 rounded-xl bg-slate-800/60 border border-slate-700 cursor-pointer hover:border-amber-500/50 transition-all">
+                            <input type="checkbox" id="calc-reels" value="300" class="w-5 h-5 accent-amber-500 rounded">
+                            <span class="text-slate-200 text-sm font-semibold">فيديوهات قصيرة للسوشيال ميديا (Reels)</span>
+                        </label>
+                    </div>
+
+                    <!-- Total Price Display -->
+                    <div class="p-6 rounded-2xl bg-slate-800/80 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+                        <div>
+                            <span class="text-xs text-slate-400 block">التكلفة التقديرية للباقة:</span>
+                            <span id="total-price" class="text-3xl font-black text-amber-400">2500 درهم</span>
+                        </div>
+                        <button id="send-quote-btn" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-amber-500 text-slate-950 font-bold hover:bg-amber-400 transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>تأكيد الباقة عبر الواتساب</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Reviews -->
+    <section id="reviews" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-400 font-bold text-sm tracking-wider uppercase mb-2 block">آراء الزبناء</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">ماذا يقول عملاؤنا عن خدماتنا؟</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 relative">
+                    <div class="flex text-amber-400 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        "تبارك الله على الأخ ياسين، التصوير كان أكثر من رائع والألبوم خرج بجودة عالية جداً. التعامل راقي والأخلاق عالية."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">م</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">محمد وزوجته</h4>
+                            <span class="text-slate-500 text-xs">حفل زفاف - طنجة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 relative">
+                    <div class="flex text-amber-400 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        "الفيديو السينمائي لعقيقة ابنتي كان مميزاً جداً! ياسين التقاطاته ممتازة واهتمامه بالتفاصيل والديكور كان احترافي."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">س</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">سارة ب.</h4>
+                            <span class="text-slate-500 text-xs">حفل عقيقة - العرائش</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 relative">
+                    <div class="flex text-amber-400 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        "الالتزام بالمواعيد وسرعة تسليم الصور والألبوم كان أسرع مما توقعنا. شكراً جزيلاً ياسين على الخدمة الممتازة."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">ع</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">عثمان العلمي</h4>
+                            <span class="text-slate-500 text-xs">حفل خطوبة - العرائش</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Brand Info -->
+                <div class="md:col-span-2">
+                    <a href="#" class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-300 flex items-center justify-center text-slate-950 font-black text-xl">
+                            <i class="fa-solid fa-camera-retro"></i>
+                        </div>
+                        <span class="text-xl font-extrabold text-white">YASSINE PHOTOGRAPHY</span>
+                    </a>
+                    <p class="text-slate-400 text-sm max-w-sm mb-6">
+                        استوديو ياسين للتصوير الفوتوغرافي والفيديو السينمائي بمدينة العرائش. نسعى دائماً لتوثيق أرقى اللحظات في حياتكم بأعلى المعايير الاحترافية.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="https://wa.me/212660949017" target="_blank" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-amber-400 flex items-center justify-center hover:bg-amber-500 hover:text-slate-950 transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-amber-400 flex items-center justify-center hover:bg-amber-500 hover:text-slate-950 transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-amber-400 flex items-center justify-center hover:bg-amber-500 hover:text-slate-950 transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm">روابط سريعة</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#about" class="hover:text-amber-400 transition-colors">من نحن</a></li>
+                        <li><a href="#services" class="hover:text-amber-400 transition-colors">خدمات التصوير</a></li>
+                        <li><a href="#portfolio" class="hover:text-amber-400 transition-colors">معرض الصور</a></li>
+                        <li><a href="#calculator" class="hover:text-amber-400 transition-colors">حاسبة الأسعار</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm">معلومات التواصل</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-amber-400"></i>
+                            <span dir="ltr">+212 660-949017</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-amber-400"></i>
+                            <span dir="ltr">+212 660-949017</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-location-dot text-amber-400"></i>
+                            <span>العرائش، المملكة المغربية</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800/80 pt-8 text-center text-xs text-slate-500">
+                <p>جميع الحقوق محفوظة © <span id="year"></span> Yassine Photography</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/212660949017?text=السلام%20عليكم%20أريد%20الاستفسار%20عن%20خدمات%20التصوير" target="_blank" class="fixed bottom-6 left-6 z-50 w-14 h-14 bg-emerald-500 text-white rounded-full flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform shadow-emerald-500/30">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Set dynamic current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Filter Gallery Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-amber-500', 'text-slate-950');
+                    b.classList.add('bg-slate-800', 'text-slate-300');
+                });
+                btn.classList.add('bg-amber-500', 'text-slate-950');
+                btn.classList.remove('bg-slate-800', 'text-slate-300');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Interactive Price Calculator Logic
+        const calcType = document.getElementById('calc-type');
+        const calcDrone = document.getElementById('calc-drone');
+        const calcAlbum = document.getElementById('calc-album');
+        const calcCrane = document.getElementById('calc-crane');
+        const calcReels = document.getElementById('calc-reels');
+        const totalPriceEl = document.getElementById('total-price');
+        const sendQuoteBtn = document.getElementById('send-quote-btn');
+
+        function calculateTotal() {
+            let base = parseInt(calcType.value) || 0;
+            if (calcDrone.checked) base += parseInt(calcDrone.value);
+            if (calcAlbum.checked) base += parseInt(calcAlbum.value);
+            if (calcCrane.checked) base += parseInt(calcCrane.value);
+            if (calcReels.checked) base += parseInt(calcReels.value);
+
+            totalPriceEl.textContent = base + " درهم";
+            return base;
+        }
+
+        // Add Event Listeners for Calculator
+        calcType.addEventListener('change', calculateTotal);
+        calcDrone.addEventListener('change', calculateTotal);
+        calcAlbum.addEventListener('change', calculateTotal);
+        calcCrane.addEventListener('change', calculateTotal);
+        calcReels.addEventListener('change', calculateTotal);
+
+        // Send Quote to WhatsApp
+        sendQuoteBtn.addEventListener('click', () => {
+            const total = calculateTotal();
+            const eventTypeText = calcType.options[calcType.selectedIndex].text;
+            
+            let addons = [];
+            if (calcDrone.checked) addons.push("تصوير جوي Drone");
+            if (calcAlbum.checked) addons.push("ألبوم حراري فاخر");
+            if (calcCrane.checked) addons.push("كاميرا إضافية + طاقم فيديو");
+            if (calcReels.checked) addons.push("فيديوهات قصيرة Reels");
+
+            let message = `السلام عليكم الأخ ياسين، أريد حجز باقة بالمواصفات التالية:%0A`;
+            message += `📌 *نوع المناسبة:* ${eventTypeText}%0A`;
+            if (addons.length > 0) {
+                message += `➕ *الإضافات:* ${addons.join(' - ')}%0A`;
+            }
+            message += `💰 *التكلفة التقديرية:* ${total} درهم%0A%0Aأريد تأكيد التوفر والتفاصيل.`;
+
+            window.open(`https://wa.me/212660949017?text=${message}`, '_blank');
+        });
+    </script>
+</body>
+</html>
